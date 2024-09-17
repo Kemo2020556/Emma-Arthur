@@ -1,0 +1,128 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('./images/dwdw.jpg'); /* تأكد من صحة المسار إلى الصورة */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    margin: 50px auto;
+    width: 90%; /* تقليل العرض على الشاشات الصغيرة */
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-name {
+    position: absolute;
+    top: 1px;
+    left: 290%;
+    transform: translateX(-100%);
+    color: #fff;
+    font-size: 1.4em; /* حجم الخط للأجهزة الصغيرة */
+    font-weight: 500;
+    background: rgba(0, 0, 0, 1.9);
+    padding: 15px 30px;
+    border-radius: 300px;
+}
+
+.main-image {
+    width: 120px; /* حجم الصورة */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.text-section {
+    margin-top: 20px;
+}
+
+.text-section p {
+    margin: 10px 0;
+    color: #fff;
+    font-size: 1em; /* حجم الخط */
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px; /* حشو الأزرار */
+    margin-top: 20px;
+    background-color: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em; /* حجم الخط للأزرار */
+    font-weight: 700;
+}
+
+.button i {
+    margin-right: 8px;
+    font-size: 1em;
+}
+
+.button:hover {
+    background-color: #1e8e6e;
+}
+
+/* نافذة منبثقة */
+.popup {
+    display: none; /* بدايةً تكون مخفية */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* خلفية داكنة مع شفافية */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+/* وسائط الاستعلام لتحسين العرض على الشاشات الصغيرة */
+@media (max-width: 600px) {
+    .profile-name {
+        font-size: 1em;
+    }
+
+    .main-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .text-se
